@@ -162,7 +162,7 @@ void app_main() {
                     printf("Resultado: %.2f\n", resultado);
                 }
             } else {
-                printf("Entrada Serial invalida! Use: numero operador numero\n");
+                printf("Use numeros!!\n");
             }
         }
 
