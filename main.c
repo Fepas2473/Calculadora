@@ -16,7 +16,7 @@ char keys[ROWS][COLS] = {
     {'1','2','3','+'},
     {'4','5','6','-'},
     {'7','8','9','*'},
-    {'C','0','=','/'}
+    {'%','0','=','/'}
 };
 
 // Inicializa o keypad
@@ -60,6 +60,10 @@ float calcular(float num1, float num2, char operador, int *erro) {
                 return 0;
             }
             return num1 / num2;
+        
+        case '%': 
+            return (num1 * num2) / 100.0;
+        
         default:
             *erro = 1;
             return 0;
