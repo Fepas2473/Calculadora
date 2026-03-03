@@ -74,16 +74,18 @@ void app_main() {
     float num1=0, num2=0;
     char operador=0;
 
+    printf("Feito por Felipe Moreira ツ\n");
     printf("\n=== CALCULADORA ESP32 HIBRIDA ===\n");
-    printf("Use keypad ou digite no Serial Monitor.\n");
-    printf("Use '=' para calcular e 'C' para limpar\n");
-    printf("Formato Serial: numero operador numero (ex: 10 + 5)\n");
+    printf("Use o teclado numérico e digite no AQUI ↓.\n");
+    printf("Use 'Enter' para calcular \n");
+    printf("Utilize +,-,/ e * \n");
+
 
     while(1) {
         // ----- LEITURA DO KEYPAD -----
     char key = keypad_getkey();
     if(key) {
-     printf("Tecla: %c\n", key)
+     printf("Tecla: %c\n", key);
 
     if(key >= '0' && key <= '9') {
     strncat(input, &key, 1);
