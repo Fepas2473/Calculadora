@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Calculadora ESP32 Limpa",
+  "editor": "wokwi",
+  "parts": [
+    { "id": "esp", "type": "wokwi-esp32-devkit-v1", "attrs": { "builder": "esp-idf" } },
+    { "id": "keypad", "type": "wokwi-keypad-4x4" }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "" ],
+    [ "esp:RX0", "$serialMonitor:TX", "" ],
+
+    [ "keypad:R1", "esp:18", "" ],
+    [ "keypad:R2", "esp:19", "" ],
+    [ "keypad:R3", "esp:21", "" ],
+    [ "keypad:R4", "esp:22", "" ],
+
+    [ "keypad:C1", "esp:23", "" ],
+    [ "keypad:C2", "esp:5", "" ],
+    [ "keypad:C3", "esp:17", "" ],
+    [ "keypad:C4", "esp:16", "" ]
+  ]
+}
