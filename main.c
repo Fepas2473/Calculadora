@@ -37,7 +37,7 @@ char keypad_getkey() {
         gpio_set_level(col_pins[c], 0);
         for(int r=0;r<ROWS;r++){
             if(gpio_get_level(row_pins[r]) == 0){
-                vTaskDelay(pdMS_TO_TICKS(200)); // debounce
+                vTaskDelay(pdMS_TO_TICKS(200)); // 
                 gpio_set_level(col_pins[c], 1);
                 return keys[r][c];
             }
@@ -130,7 +130,7 @@ void app_main() {
                     printf("Resultado: %.2f\n", resultado);
                 }
             } else {
-                printf("Entrada Serial invalida! Use: numero operador numero\n");
+                printf("Use número ao invés de letra\n");
             }
         }
 
