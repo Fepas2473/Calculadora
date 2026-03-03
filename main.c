@@ -82,7 +82,7 @@ void app_main() {
     printf("\n=== CALCULADORA ESP32 HIBRIDA ===\n");
     printf("Use o teclado numérico e digite no AQUI ↓.\n");
     printf("Use 'Enter' para calcular \n");
-    printf("Utilize +,-,/ e * \n");
+    printf("Utilize +,-,/,* e % \n");
 
 
     while(1) {
